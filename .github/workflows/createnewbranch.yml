@@ -4,9 +4,9 @@ name: createnewbranch
 jobs:
   create-branch:
     runs-on: ubuntu-latest
-     steps:
+    steps:
     - name: Checkout repository
-      uses: actions/Rajesh
+      uses: actions/createnewbranch@v3
     - name: Configure Git
       run: |
         git config user.name "RB01622"
