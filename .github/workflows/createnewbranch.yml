@@ -1,0 +1,18 @@
+name: createnewbranch
+'on':
+  workflow_dispatch: null
+jobs:
+  create-branch: null
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout repository
+      uses: actions/Rajesh
+    - name: Configure Git
+      run: |
+        git config user.name "RB01622"
+        git config user.email "kbkannah@gmail.com"
+    - name: Create and push new branch
+      run: |
+        git pull origin
+        git checkout -b Rajesh-Dev
+        git push origin Rajesh-Dev
