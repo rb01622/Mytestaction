@@ -2,9 +2,9 @@ name: createnewbranch
 'on':
   workflow_dispatch: null
 jobs:
-  create-branch: null
-  runs-on: ubuntu-latest
-  steps:
+  create-branch:
+    runs-on: ubuntu-latest
+     steps:
     - name: Checkout repository
       uses: actions/Rajesh
     - name: Configure Git
