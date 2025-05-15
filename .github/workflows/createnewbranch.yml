@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/createnewbranch@v4
+      uses: actions/checkout@v4
     - name: Configure Git
       run: |
         git config user.name "RB01622"
