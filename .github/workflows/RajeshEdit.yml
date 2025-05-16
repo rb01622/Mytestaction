@@ -13,16 +13,16 @@ jobs:
 
       - name: Make changes to a file
         run: |
-          echo "Updated on $(date)" >> MyFirstAppOne.txt
+          echo "This my first app V.1.1" >> MyFirstAppOne.txt
 
       - name: Configure Git
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "RB01622"
+          git config user.email "kbkannah@gmail.com"
 
       - name: Commit changes
         run: |
-          git add example.txt
+          git add MyFirstAppOne.txt
           git commit -m "Update MyFirstAppOne.txt via GitHub Actions" || echo "No changes to commit"
 
       - name: Push changes
