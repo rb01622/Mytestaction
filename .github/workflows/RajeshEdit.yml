@@ -1,0 +1,29 @@
+name: Rajesh Edit and Commit File
+
+on:
+  workflow_dispatch:  # Allows manual triggering from GitHub UI
+
+jobs:
+  rajesh-edit-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Make changes to a file
+        run: |
+          echo "Updated on $(date)" >> MyFirstAppOne.txt
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Commit changes
+        run: |
+          git add example.txt
+          git commit -m "Update MyFirstAppOne.txt via GitHub Actions" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push origin HEAD
